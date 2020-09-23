@@ -23,5 +23,5 @@ export function randFloat(min: number, max: number): number {
  * @param upperLimit The upper limit of the roll
  */
 export function roll(upperLimit: number): boolean {
-	return randInt(0, upperLimit) === 1;
+	return randInt(1, upperLimit) === 1;
 }
