@@ -1,4 +1,4 @@
-import { notEmpty } from '../src';
+import { noOp, notEmpty } from '../src';
 
 test('notEmpty', () => {
 	let arr = [0, false, 1, 2, 3, 4, null, undefined];
@@ -8,4 +8,8 @@ test('notEmpty', () => {
 	expect(notEmpty(null)).toBeFalsy();
 	expect(notEmpty(0)).toBeTruthy();
 	expect(notEmpty(false)).toBeTruthy();
+});
+
+test('noOp', () => {
+	expect(noOp()).toBeUndefined();
 });

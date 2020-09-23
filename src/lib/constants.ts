@@ -7,3 +7,5 @@ export const enum Time {
 	Month = 1000 * 60 * 60 * 24 * 30,
 	Year = 1000 * 60 * 60 * 24 * 365
 }
+
+export const primitiveTypes = ['string', 'bigint', 'number', 'boolean'];
