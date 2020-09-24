@@ -1,6 +1,6 @@
 {
 	"name": "e",
-	"version": "0.0.4",
+	"version": "0.1.0",
 	"description": "A modern universal utility library.",
 	"author": "gc",
 	"license": "MIT",
@@ -9,7 +9,6 @@
 	"browser": "dist/index.umd.js",
 	"unpkg": "dist/index.umd.js",
 	"types": "dist/index.d.ts",
-	"homepage": "https://skyra-project.github.io/char",
 	"private": false,
 	"files": [
 		"dist"
@@ -53,25 +52,21 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/skyra-project/char.git"
+		"url": "git+https://github.com/gc/e.git"
 	},
 	"engines": {
 		"node": ">=12",
 		"npm": ">=6"
 	},
 	"keywords": [
-		"ascii",
-		"latin-1",
-		"utf-8",
 		"typescript",
 		"ts",
-		"yarn",
-		"char",
-		"character",
-		"utility"
+		"utility",
+		"util",
+		"lodash"
 	],
 	"bugs": {
-		"url": "https://github.com/skyra-project/char/issues"
+		"url": "https://github.com/gc/e/issues"
 	},
 	"husky": {
 		"hooks": {
@@ -80,10 +75,7 @@
 		}
 	},
 	"lint-staged": {
-		"*.{mjs,js,ts}": "eslint --fix --ext mjs,js,ts"
-	},
-	"publishConfig": {
-		"access": "public"
+		"*.{,js,ts}": "eslint --fix --ext mjs,js,ts"
 	},
 	"resolutions": {
 		"acorn": "^7.3.1",

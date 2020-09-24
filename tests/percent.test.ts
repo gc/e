@@ -18,4 +18,5 @@ test('reduceNumByPercent', () => {
 	expect(reduceNumByPercent(100, 10)).toEqual(90);
 	expect(reduceNumByPercent(100, 100)).toEqual(0);
 	expect(reduceNumByPercent(100, 50)).toEqual(50);
+	expect(reduceNumByPercent(100, -1)).toEqual(100);
 });
