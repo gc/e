@@ -1,4 +1,4 @@
-import { calcPercentOfNum, calcWhatPercent, reduceNumByPercent } from '../src/lib/percent';
+import { calcPercentOfNum, calcWhatPercent, increaseNumByPercent, reduceNumByPercent } from '../src/lib/percent';
 
 test('calcPercentOfNum', () => {
 	expect(calcPercentOfNum(10, 100)).toEqual(10);
@@ -19,4 +19,12 @@ test('reduceNumByPercent', () => {
 	expect(reduceNumByPercent(100, 100)).toEqual(0);
 	expect(reduceNumByPercent(100, 50)).toEqual(50);
 	expect(reduceNumByPercent(100, -1)).toEqual(100);
+});
+
+test('increaseNumByPercent', () => {
+	expect(increaseNumByPercent(100, 10)).toEqual(110);
+	expect(increaseNumByPercent(100, 100)).toEqual(200);
+	expect(increaseNumByPercent(100, 50)).toEqual(150);
+	expect(increaseNumByPercent(100, -1)).toEqual(100);
+	expect(increaseNumByPercent(100, 101)).toEqual(201);
 });

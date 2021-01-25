@@ -19,10 +19,19 @@ export function calcPercentOfNum(percent: number, valueToCalc: number): number {
 /**
  * Reduces a number by a percentage of itself.
  * @param value, The number to be reduced.
- * @param percent The total number that you want to get the percentage of.
+ * @param percent The percent you want the value to be reduced by.
  */
 export function reduceNumByPercent(value: number, percent: number): number {
 	if (percent <= 0) return value;
-	if (percent >= 100) return 0;
 	return value - value * (percent / 100);
+}
+
+/**
+ * Increases a number by a percentage of itself.
+ * @param value, The number to be increased.
+ * @param percent The percent you want the value to be increased by.
+ */
+export function increaseNumByPercent(value: number, percent: number): number {
+	if (percent <= 0) return value;
+	return value + value * (percent / 100);
 }
