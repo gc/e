@@ -6,3 +6,4 @@ export * from './lib/percent';
 export * from './lib/array';
 export * from './lib/chance';
 export * from './lib/types';
+export * from './lib/number';
