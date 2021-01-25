@@ -28,3 +28,26 @@ export function chunk<T>(array: readonly T[], chunkSize: number): T[][] {
 export function uniqueArr<T>(arr: readonly T[]): T[] {
 	return [...new Set(arr)];
 }
+
+/**
+ * Returns the sum of an array of numbers.
+ *
+ * @param arr The array of numbers to sum.
+ */
+export function sumArr(arr: readonly number[]) {
+	return arr.reduce((a, b) => a + b, 0);
+}
+
+/**
+ * Returns a shuffled copy of an array.
+ *
+ * @param array The array to shuffle.
+ */
+export function shuffleArr<T>(array: readonly T[]): T[] {
+	let copy = [...array];
+	for (let i = copy.length - 1; i > 0; i--) {
+		const j = Math.floor(Math.random() * (i + 1));
+		[copy[i], copy[j]] = [copy[j], copy[i]];
+	}
+	return copy;
+}
