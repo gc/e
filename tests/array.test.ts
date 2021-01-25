@@ -1,4 +1,4 @@
-import { chunk, randArrItem } from '../src/lib/array';
+import { chunk, randArrItem, uniqueArr } from '../src/lib/array';
 
 describe('chunk', () => {
 	test('GIVEN chunks is a whole number THEN throws TypeError', () => {
@@ -25,4 +25,9 @@ describe('chunk', () => {
 test('randArrItem', () => {
 	expect(randArrItem([1, 1, 1])).toEqual(1);
 	expect([1, 2, 3, 4, 5]).toContain(randArrItem([1, 2, 3, 4, 5]));
+});
+
+test('uniqueArr', () => {
+	expect(uniqueArr([1, 1, 1])).toEqual([1]);
+	expect([1, 2, 3, 4, 5]).toEqual(uniqueArr([1, 2, 3, 4, 5]));
 });

@@ -19,3 +19,12 @@ export function chunk<T>(array: readonly T[], chunkSize: number): T[][] {
 	while (clone.length) chunks.push(clone.splice(0, chunkSize));
 	return chunks;
 }
+
+/**
+ * Returns a copy of an array with duplicates removed.
+ *
+ * @param arr The array to copy and remove duplicates from.
+ */
+export function uniqueArr<T>(arr: readonly T[]): T[] {
+	return [...new Set(arr)];
+}
