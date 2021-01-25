@@ -2,7 +2,7 @@
  * Picks a random item from an array.
  * @param array The array to pick from.
  */
-export function randArrItem<T>(array: T[]): T {
+export function randArrItem<T>(array: readonly T[]): T {
 	return array[Math.floor(Math.random() * array.length)];
 }
 
