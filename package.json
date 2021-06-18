@@ -5,7 +5,7 @@
 	"author": "gc",
 	"license": "MIT",
 	"main": "dist/index.js",
-	"module": "dist/index.es.js",
+	"module": "dist/index.es.mjs",
 	"browser": "dist/index.umd.js",
 	"unpkg": "dist/index.umd.js",
 	"types": "dist/index.d.ts",
