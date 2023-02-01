@@ -16,3 +16,8 @@ export function isObject(input: unknown): input is Record<PropertyKey, unknown> 
 export function isPrimitive(input: unknown): input is string | bigint | number | boolean {
 	return primitiveTypes.includes(typeof input);
 }
+
+// eslint-disable-next-line @typescript-eslint/ban-types
+export function isFunction(input: unknown): input is Function {
+	return typeof input === 'function';
+}

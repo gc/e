@@ -1,4 +1,4 @@
-import { chunk, randArrItem, shuffleArr, sumArr, uniqueArr } from '../src/lib/array';
+import { chunk, partition, randArrItem, shuffleArr, sumArr, uniqueArr } from '../src/lib/array';
 
 describe('chunk', () => {
 	test('GIVEN chunks is a whole number THEN throws TypeError', () => {
@@ -39,4 +39,11 @@ test('sumArr', () => {
 
 test('shuffleArr', () => {
 	expect(shuffleArr([1, 2, 3])).toEqual(expect.arrayContaining([1, 2, 3]));
+});
+
+test('partition', () => {
+	const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+	const partitioned = partition(arr, (i) => i >= 5);
+	expect(partitioned[0]).toEqual([5, 6, 7, 8, 9, 10]);
+	expect(partitioned[1]).toEqual([1, 2, 3, 4]);
 });

@@ -51,3 +51,17 @@ export function shuffleArr<T>(array: readonly T[]): T[] {
 	}
 	return copy;
 }
+
+/**
+ *
+ * @param arr The array to partition
+ * @param filter The filter by which to partition the array
+ */
+export function partition<T>(arr: T[], filter: (item: T) => boolean): [T[], T[]] {
+	const firstArray: T[] = [];
+	const secondArray: T[] = [];
+	for (const item of arr) {
+		(filter(item) ? firstArray : secondArray).push(item);
+	}
+	return [firstArray, secondArray];
+}
