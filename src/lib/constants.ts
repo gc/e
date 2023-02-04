@@ -1,4 +1,4 @@
-export const enum Time {
+export enum Time {
 	Millisecond = 1,
 	Second = 1000,
 	Minute = 1000 * 60,
