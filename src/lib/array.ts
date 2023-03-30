@@ -65,3 +65,7 @@ export function partition<T>(arr: T[], filter: (item: T) => boolean): [T[], T[]]
 	}
 	return [firstArray, secondArray];
 }
+
+export function removeFromArr<T>(arr: T[] | readonly T[], item: T) {
+	return arr.filter((i) => i !== item);
+}
